@@ -36,12 +36,34 @@
   <div class="container">
 
     <div class="content">
+      <h1>Форма обратной связи</h1>
 
+      <form action="/handler.php" method="POST" name="form01">
+        <label for="input-name">Введите Ваше имя</label>
+        <input type="text" name="inputName" id="input-name" placeholder="John Doe">
+        <div id="nameError"></div>
+        <br>
+        <label for="input-phone">Введите Ваш номер телефона в формате: +7(xxx)xxx-xxxx</label>
+        <input type="tel" name="phone" id="input-phone" placeholder="+7(499)368-9517">
+        <div id="phoneError"></div>
+        <br>
+        <label for="input-email">Введите Ваш email</label>
+        <input type="email" name="email" id="input-email" placeholder="john-doe@mail.ru">
+        <div id="emailError"></div>
+        <label for="input-town">Введите Город проживания (необязательно)</label>
+        <input type="text" name="inputTown" id="input-town" placeholder="Moscow">
+        <div id="townError"></div>
+        <br>
+        <label for="input-message">Для комментариев</label>
+        <textarea name="message" id="input-message" cols="40" rows="10"></textarea>
+        <input type="submit" value="Submit" name="btnSubmit">
+      </form>
 
     </div>
   </div>
 
-
+  <script src="js/lib/jquery/jquery-3.3.1.js"></script>
+  <script src="js/script02_form_check.js"></script>
   <script src="js/script02.js"></script>
 </body>
 
