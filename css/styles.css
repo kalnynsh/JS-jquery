@@ -364,3 +364,9 @@ body {
 .info1.active {
   display: block;
 }
+
+#towns-list {
+  height: 80px;
+  width: 20%;
+  overflow: auto;
+}
