@@ -125,32 +125,6 @@ body {
   display: flex;
 }
 
-/*Дополнительные блоки */
-/* 
-.content__info2 {
-    background-color: #d9dddd;
-    width: 100%;
-    padding: 15px;
-}
-
-.content__info3 {
-    background-color: #e8eaec;
-    width: 100%;
-    padding: 15px;
-}
-
-.content__info4 {
-    background-color: #d9dddd;
-    width: 100%;
-    padding: 15px;
-}
-
-.content__info5 {
-    background-color: #f3f3f3;
-    width: 100%;
-    padding: 15px;
-} */
-
 /* nav-bar Left side menu Begin */
 .nav-left-side {
   margin: 15px 40px 15px 0;
@@ -164,16 +138,11 @@ body {
   left: auto;
   margin: 0;
   padding: 0;
-  /* Поля */
   list-style: none;
-  /* Градиент */
   border: 1px solid #999;
   border-radius: 1px;
-  /* Параметры рамки */
   font: 14px sans-serif;
-  /* Параметры шрифта */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Тень под меню */
   text-align: center;
 }
 
@@ -215,51 +184,14 @@ body {
 
 .nav-bar__item1 {
   display: block;
-  /* Выстраиваем по горизонтали */
   position: relative;
-  /* Относительное позиционирование */
   top: 0;
   left: 0;
   margin: 0;
-  padding: 3px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #999;
   border-right: 1px solid #fff;
-  /* Белая линия справа */
   background: linear-gradient(to bottom, rgb(247, 244, 244), #bfd3d3);
-}
-
-.nav-bar__item2 {
-  display: block;
-  /* Выстраиваем по горизонтали */
-  position: relative;
-  /* Абсолютное позиционирование */
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar a {
-  text-decoration: none;
-  /* Убираем подчёркивание */
-  color: #4c4c4c;
-  /* Цвет ссылок */
-  display: block;
-  /* Блочные ссылки */
-}
-
-.nav-bar__item1 a,
-.nav-bar__item2 a {
-  padding: 10px 15px;
-  /* Поля */
-  border-right: 1px solid #d8d8d8;
-  /* Серая линия справа */
-  position: relative;
-  /* Относительное позиционирование */
-  z-index: 3;
-  /* Выводим поверх остальных элементов */
-  text-overflow: ellipsis;
-  /* Если текст не помещается то "..."*/
 }
 
 .nav-bar__item1:hover::before {
@@ -267,54 +199,91 @@ body {
   top: 0;
   left: 0;
   box-shadow: 0 5px 10px #666;
-  /* Параметры тени */
   position: absolute;
 }
 
-.nav-bar__item2 a {
-  border-bottom: 1px solid #eaeaea;
-  height: auto;
+.nav-bar .nav-bar__item1:not(.active) {
+  cursor: pointer;
 }
 
-.nav-bar ul {
-  width: auto;
-  /* Ширина подменю */
-  height: auto;
-  /*display: block;*/
-  display: none;
-  /* Прячем подменю */
-  position: absolute;
-  /* Абсолютное позиционирование */
-  top: 0;
-  left: calc(100% + 4px);
-  background-color: #fff;
-  /* Цвет фона */
-  box-shadow: 0 0 10px #666;
-  /* Параметры тени */
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.nav-bar .nav-bar__item1:not(.active):hover {
+  background: rgb(242, 246, 248);
+  /* Old browsers */
+
+  background: -moz-linear-gradient(
+    top,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 50%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(167, 209, 209, 1) 100%
+  );
+  /* FF3.6-15 */
+
+  background: -webkit-linear-gradient(
+    top,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 50%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(167, 209, 209, 1) 100%
+  );
+  /* Chrome10-25,Safari5.1-6 */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 50%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(167, 209, 209, 1) 100%
+  );
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#f2f6f8",
+      endColorstr="#a7d1d1",
+      GradientType=0
+    );
+  /* IE6-9 */
 }
 
-.nav-bar__item2 a:hover {
-  background-color: #008df2;
-  /* Цвет фона */
-  color: #fff;
-  /* Цвет текста */
-  transition: background-color 0.2s ease;
+.nav-bar .nav-bar__item1.active {
+  background: rgb(242, 246, 248);
+  /* Old browsers */
+
+  background: -moz-linear-gradient(
+    top,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 50%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(155, 208, 242, 1) 100%
+  );
+  /* FF3.6-15 */
+
+  background: -webkit-linear-gradient(
+    top,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 50%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(155, 208, 242, 1) 100%
+  );
+  /* Chrome10-25,Safari5.1-6 */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(216, 225, 231, 1) 50%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(155, 208, 242, 1) 100%
+  );
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#f2f6f8",
+      endColorstr="#9bd0f2",
+      GradientType=0
+    );
+  /* IE6-9 */
 }
 
-/*.nav-bar li:hover ul {
-    display: block;
-     вывод подменю при наведении курсора мыши на пункты меню
-    transition: display .1s ease;
-}*/
-
-.nav-bar__item1:hover ul {
-  display: block;
-  /* вывод подменю при наведении курсора мыши на пункты меню */
-  transition: display 0.1s ease;
-}
 /*  nav-bar End */
 
 /* .info1 Begin */
