@@ -147,7 +147,11 @@ body {
 }
 
 .nav-bar__title {
-  width: 100%;
+  width: auto;
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  text-align: center;
   background: rgb(252, 255, 244);
   /* Old browsers */
   background: -moz-linear-gradient(
@@ -287,8 +291,15 @@ body {
 /*  nav-bar End */
 
 /* .info1 Begin */
+/* Default not displaying */
 .info1 {
+  display: none;
+  padding-top: 7px;
   padding-right: 15px;
   padding-bottom: 30px;
   line-height: 1.5rem;
+}
+/* If have .active displaying */
+.info1.active {
+  display: block;
 }
